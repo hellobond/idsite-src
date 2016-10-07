@@ -3,6 +3,6 @@
 From within the `static` directory, run:
 
 ```
-npm install
+make
 ./node_modules/.bin/static-server
 ````
