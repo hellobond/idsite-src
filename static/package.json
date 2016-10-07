@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "style-guide": "git+ssh://git@github.com/hellobond/style-guide.git#dev"
+  },
+  "devDependencies": {
+    "static-server": "^2.0.3"
   }
 }
