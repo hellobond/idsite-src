@@ -3,7 +3,6 @@
 From within the `static` directory, run:
 
 ```
-make;
+make
 ./node_modules/.bin/static-server
-
 ````
