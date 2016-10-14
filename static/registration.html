@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login | Bond</title>
+    <title>Resgistration | Bond</title>
 
     <!-- Bootstrap + Bond styleguide -->
     <link href="node_modules/style-guide/bond-bootstrap.css" rel="stylesheet">
@@ -32,7 +32,7 @@
             <div class="col-xs-12">
               <div class="header text-center">
                 <img src="img/logo.png" alt="" class="logo" />
-                <h1>Welcome back!</h1>
+                <h1>Welcome!</h1>
               </div>
             </div>
           </div>
@@ -50,13 +50,22 @@
           <div class="row">
             <div class="col-xs-12">
               <form>
-                <legend>Log in</legend>
+                <legend>Sign up</legend>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div>
                 <div class="form-group has-error">
                   <input type="email" class="form-control" placeholder="Email">
                   <span class="help-block">This is the error</span>
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password (again)">
                 </div>
                 <input type="button" name="name" value="Submit" class="btn btn-primary btn-lg btn-block">
               </form>
