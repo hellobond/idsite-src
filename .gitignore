@@ -6,3 +6,4 @@ app/bower_components
 coverage
 .env
 .DS_Store
+/.BridgeLabelsAndRatings
