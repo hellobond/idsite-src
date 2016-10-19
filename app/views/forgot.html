@@ -1,15 +1,16 @@
 <div class="view forgot-view" ng-show="ready">
 	<h1 class="text-center">Forgot your password?</h1>
 	<p class="text-center">We're sorry to hear that! Please reset your password below.</p>
-	<div class="box row">
+	<!-- <div class="box row"> -->
+	<div class="row">
 		<div class="col-sm-12">
 			<div class="header">
 				<!-- <span ng-show="!sent && !retry">Password Reset</span> -->
-				<legend ng-show="!sent && !retry">Reset your password</legend>
+				<legend ng-show="!sent && !retry">Send password reset instructions </legend>
 
 
-				<span ng-show="retry">Reset link has expired</span>
-				<span ng-show="sent">Please check your mail.</span>
+				<legend ng-show="retry">Reset link has expired</legend>
+				<legend ng-show="sent">Please check your mail.</legend>
 
 			</div>
 			<div class="wd-sent" ng-show="sent">
@@ -36,9 +37,14 @@
 				</div>
 
 				<div class="form-group group-email" ng-class="{'has-error':notFound}" form-group>
-					<label class="col-sm-6" ng-hide="retry">Send password reset instructions to:</label>
-					<label class="col-sm-6" ng-show="retry">Send new password reset email to:</label>
-					<div class="col-sm-6">
+					<!-- <label class="col-sm-6" ng-hide="retry">Send password reset instructions to:</label>
+					<label class="col-sm-6" ng-show="retry">Send new password reset email to:</label> -->
+					<!-- <div class="col-sm-6">
+						<input type="text" class="form-control" name="email" placeholder="Email" form-control email-validation validate-on-blur/>
+						<small class="help-block wd-invalid-email" ng-show="validationError">Invalid email address</small>
+						<small class="help-block wd-not-found" ng-show="notFound"><span>Account does not exist.</span></small>
+					</div> -->
+					<div class="col-sm-12">
 						<input type="text" class="form-control" name="email" placeholder="Email" form-control email-validation validate-on-blur/>
 						<small class="help-block wd-invalid-email" ng-show="validationError">Invalid email address</small>
 						<small class="help-block wd-not-found" ng-show="notFound"><span>Account does not exist.</span></small>
@@ -50,7 +56,7 @@
 					<br/>
 					<p>{{unknownError}}</p>
 				</div>
-				<button class="btn btn-primary btn-forgot" ng-disabled="submitting" type="submit">Reset Password</button>
+				<button class="btn capitalize btn-primary btn-lg btn-forgot col-sm-12" ng-disabled="submitting" type="submit">Submit</button>
 			</form>
 		</div>
 	</div>
