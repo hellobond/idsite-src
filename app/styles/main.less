@@ -35,7 +35,7 @@
 @boxBorderRadius: 3px;
 @inputHeight: 45px;
 @gray1: #f6f6f6;
-@baseFontSize: 14px;
+@baseFontSize: 18px;
 @boxGutter: 30px;
 @primary-color: #A99A6F;
 @primary-color-hover: #8f8056;
@@ -66,7 +66,8 @@ a{
 	color: @primary-color;
 
 	&:hover {
-		text-decoration: none;
+		color: @primary-color;
+		text-decoration: underline;
 	}
 }
 
@@ -79,8 +80,9 @@ strong {
 }
 
 h1 {
-	font-family: @font-family-base;
+	font-family: @font-family-base;	
     font-size: 48px;
+    font-weight: 100;
 }
 
 
@@ -90,13 +92,21 @@ h1 {
 }
 
 .logo-container{
-	margin: 34px auto 25px auto;
+	margin: 50px auto 40px auto;
 	display: block;
 }
 .logo{
 	width: 222px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	display: block;
+}
+
+.btn {
+	font-size: 18px;
+
+	&.capitalize {
+		text-transform: uppercase;
+	}
 }
 
 .btn-sp-green{
@@ -110,6 +120,14 @@ h1 {
 
 .btn-saml{
 	.flatTwoColorGradient(#458AC5,#3b7db5,#458AC5,#3b7db5);
+}
+
+.btn-lg, 
+.btn-group-lg > .btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 4px;
 }
 
 .ms-gradient-fixes(@bottomColor,@topColor){
@@ -199,15 +217,48 @@ h1 {
 }
 
 .form-control{
-	font-size: 15px;
+    width: 100%;
+    height: 49px;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #061A35;
+    display: block;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid rgba(6, 26, 53, 0.5);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+
 	&::placeholder {
 		color: #aaadb0;
 	}
-	box-shadow: none;
+	
 	&:focus{
 		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px rgba(0,132,255,.4);
 	}
 }
+.form-control {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .view{
 
@@ -217,7 +268,8 @@ h1 {
 			font-size: 21px;
 		}
 
-		padding: 34px 0;
+		//padding: 34px 0;
+		margin-top: 20px;
 	}
 	input[type="text"],
 	input[type="password"]{
@@ -358,7 +410,7 @@ h1 {
 
 				@media (min-width: @screen-xs-max){
           // has the social area to the right, is not mobile
-          border-right: @dividingBorder;
+          //border-right: @dividingBorder;
           .group-email{
           	margin-bottom: 21px;
           }
@@ -416,6 +468,10 @@ h1 {
 
 .alert{
 	word-wrap: break-word;
+
+	strong {
+		color: inherit;
+	}
 }
 .btn-primary {
 	background-color: @primary-color;
@@ -425,6 +481,16 @@ h1 {
 		background-color: @primary-color-hover;
 		border-color: @primary-color-hover;
 	}
+
+	&:active,
+	&:focus {
+		background-color: @primary-color;
+		border-color: @primary-color;
+	}
+}
+.no-margins {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 legend {
@@ -432,8 +498,9 @@ legend {
 	margin-bottom: 27px;
 	padding: 0;
     font-size: 18px;
+    font-weight: 400;
     line-height: inherit;
-    color: #A99A6F;
+    color: @primary-color;
     display: block;
     border: 0;
     border-bottom: 1px solid rgba(169, 154, 111, 0.25);

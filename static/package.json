@@ -12,6 +12,7 @@
     "style-guide": "git+ssh://git@github.com/hellobond/style-guide.git#dev"
   },
   "devDependencies": {
+    "grunt-https-proxy": "0.0.1",
     "static-server": "^2.0.3"
   }
 }
