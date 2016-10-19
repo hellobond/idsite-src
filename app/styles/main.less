@@ -109,6 +109,7 @@ small {
 	font-size: 18px;
 
 	&.capitalize {
+		width: 100%;
 		text-transform: uppercase;
 	}
 }
@@ -499,6 +500,14 @@ small {
 
 .pull-right {
 	float: right;
+}
+
+.forgot-pass {
+	text-align: right;
+
+	@media (max-width: @screen-sm) {
+		text-align: left;
+	}
 }
 
 legend {
