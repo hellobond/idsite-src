@@ -1,4 +1,4 @@
-// Generated on 2014-05-01 using generator-angular 0.8.0
+	// Generated on 2014-05-01 using generator-angular 0.8.0
 'use strict';
 
 // # Globbing
@@ -107,7 +107,8 @@ module.exports = function (grunt) {
     less: {
       development:{
         files: {
-          '.tmp/styles/main.css':'<%= yeoman.app %>/styles/main.less'
+          '.tmp/styles/main.css':'<%= yeoman.app %>/styles/main.less',
+          '.tmp/styles/bond-bootstrap.css':'<%= yeoman.app %>/styles/vendor/bond-bootstrap.css'
         }
       }
     },
