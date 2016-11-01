@@ -42,9 +42,12 @@
 					</div>
 				</legend>
 
+				<!-- Begin Organizations -->
 				<div class="form-group group-email" ng-show="showOrganizationField" ng-class="{'has-error': (errors.organizationNameKeyInvalid || errors.organizationNameKeyRequired)}">
-					<label ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-4']">Organization</label>
-					<div ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-8']">
+					<!-- <label ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-4']">Organization</label> -->
+					<label class="col-sm-12">Organization</label>
+					<!-- <div ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-8']"> -->
+					<div class="col-sm-12">
 						<input class="form-control" type="text" name="organizationNameKey" ng-model="organizationNameKey" placeholder="Organization" ng-disabled="disableOrganizationField"/>
 
 						<span ng-if="errors.organizationNameKeyRequired" class="help-block">
@@ -55,6 +58,10 @@
 						</span>
 					</div>
 				</div>
+				<!-- /End Organizations -->
+
+
+
 				<div class="form-group group-email">
 					<!-- <label ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-4']">Email</label> -->
 					<!-- <div ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-8']"> -->
