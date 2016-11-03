@@ -108,7 +108,8 @@ module.exports = function (grunt) {
       development:{
         files: {
           '.tmp/styles/main.css':'<%= yeoman.app %>/styles/main.less',
-          '.tmp/styles/bond-bootstrap.css':'<%= yeoman.app %>/styles/vendor/bond-bootstrap.css'
+          '.tmp/styles/bond-bootstrap.css':'<%= yeoman.app %>/styles/vendor/bond-bootstrap.css',
+          '.tmp/styles/bond-main.css':'<%= yeoman.app %>/styles/vendor/bond-main.css'
         }
       }
     },

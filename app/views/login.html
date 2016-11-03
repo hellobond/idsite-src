@@ -1,18 +1,16 @@
-<div class="container view login-view no-padding" ng-show="ready">
-	<h1 class="text-center">Welcome back!</h1>
-	<br />
+<div class="view login-view" ng-show="ready">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="header text-center">
+				<img ng-show="logoUrl" class="logo" ng-src="{{logoUrl}}"/>
+				<h1>Welcome back!</h1>
+			</div>
+		</div>
+	</div>
 
 	<div class="row">
-		<!-- <div class="email-password-area  col-xs-12" ng-class="[hasProviders ? 'small col-sm-8' : 'large col-sm-12']"> -->
-		<div class="email-password-area col-xs-12 large col-sm-12">
-			<!-- <div class="header">
-				<span>Log Into your Bond ^^Account*********</span>
-				<span ng-show="canRegister" wd-can-register>
-					<span> or </span>
-					<a href="#register">Create an Account</a>
-				</span>
+		<div class="email-password-area col-xs-12 large">
 
-			</div> -->
 			<div class="alert alert-danger bad-login" ng-show="errors.badLogin">
 				Invalid username or password.
 			</div>
@@ -29,6 +27,7 @@
 				<br/>
 				<p>{{errors.userMessage}}</p>
 			</div>
+
 			<form class="login-form form-horizontal" role="form" ng-submit="submit()">
 				<legend>
 					<div class="row">
@@ -59,8 +58,6 @@
 				</div>
 				<!-- /End Organizations -->
 
-
-
 				<div class="form-group group-email">
 					<!-- <label ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-4']">Email</label> -->
 					<!-- <div ng-class="[hasProviders ? 'col-sm-12' : 'col-sm-8']"> -->
@@ -80,30 +77,19 @@
 
 					<div class="col-xs-6">
 						<input type="checkbox" id="remember">
-						<label for="remember">Remember me?</label>
+						Remember me?
 					</div>
 					<div class="col-xs-6 text-right forgot-pass">
-	                    <a href="#forgot">Forgot password?</a>
-	                </div>
+						<a href="#forgot">Forgot password?</a>
+					</div>
 
 				</div>
-				<div class="clearfix">
+				<div>
 					<!-- <button class="login btn btn-login btn-sp-green" type="submit" ng-disabled="submitting">Log In</button> -->
 					<button class="login capitalize btn btn-primary btn-lg btn-login btn-block" type="submit" ng-disabled="submitting">Submit</button>
 				</div>
-
-				<!-- <a class="forgot" href="#forgot">Forgot Password?</a> -->
 			</form>
 		</div>
-
-		<!-- 
-			Google Login
-		<div class="provider-area  col-xs-12 col-sm-4" ng-show="hasProviders">
-			<div class="header">&nbsp;</div>
-			<label>Easy 1-click login:</label>
-			<button ng-repeat="provider in providers" class="btn btn-social btn-{{provider.providerId}}" ng-click="providerLogin(provider)">{{provider.accountStore ? provider.accountStore.name : provider.providerId}}</button>
-		</div> -->
-
 	</div>
 </div>
 
