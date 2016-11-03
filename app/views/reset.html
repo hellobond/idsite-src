@@ -1,17 +1,23 @@
 <div class="view reset-view" ng-show="status!=='loading'">
-	<h1 class="text-center">Forgot your password?</h1>
-	<p class="text-center">We're sorry to hear that! Please reset your password below.</p>
+	<!-- <h1 class="text-center">Forgot your password?</h1>
+	<p class="text-center">We're sorry to hear that! Please reset your password below.</p> -->
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="header">
-				<legend ng-show="status=='verified'">Reset your password</legend>
+				<legend ng-show="status=='verified'">
+					Reset your password
+				</legend>
 				<!-- <span ng-show="status=='verified'">Password Reset</span> -->
-				<span ng-show="status=='failed'">Sorry! Something went wrong.</span>
+				<div ng-show="status=='failed'">
+					<h1>Sorry!</h1>
+					<p>Something went wrong.</p>
+				</div>
 				<span ng-show="status=='success'">You have successfully changed your password.</span>
 			</div>
 			<div ng-show="status=='failed'">
 				<p>
 					<span>You will need to make a new password reset request.</span>
+					<br />
 					<a href="#/forgot">Click here to try again</a>
 				</p>
 				<p>&nbsp;</p>

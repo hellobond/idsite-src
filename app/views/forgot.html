@@ -1,16 +1,43 @@
 <div class="view forgot-view" ng-show="ready">
-	<h1 class="text-center">Forgot your password?</h1>
-	<p class="text-center">We're sorry to hear that! Please reset your password below.</p>
+	<h1 class="text-center">
+		<span ng-show="!retry">Forgot your password?</span>
+		<span ng-show="retry">Reset link has expired</span>
+	</h1>
+	<p class="text-center">
+		<span ng-show="!retry">We're sorry to hear that! Please reset your password below.</span>
+		<span ng-show="retry">Please re-enter your email again to reset your password</span>
+	</p>
 	<!-- <div class="box row"> -->
+	<br />
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="header">
 				<!-- <span ng-show="!sent && !retry">Password Reset</span> -->
-				<legend ng-show="!sent && !retry">Send password reset instructions </legend>
+				<!-- <legend ng-show="!sent && !retry">Send password reset instructions </legend> -->
+
+				<legend ng-show="!sent && !retry">
+					<div class="row">
+						<div class="col-xs-12">
+							Reset your password
+						</div>
+					</div>
+				</legend>
 
 
-				<legend ng-show="retry">Reset link has expired</legend>
-				<legend ng-show="sent">Please check your mail.</legend>
+				<!-- <legend ng-show="retry">
+					<div class="row">
+						<div class="col-xs-12">
+							Reset link has expired
+						</div>
+					</div>
+				</legend> -->
+				<legend ng-show="sent">
+					<div class="row">
+						<div class="col-xs-12">
+							Please check your mail.
+						</div>
+					</div>
+				</legend>
 
 			</div>
 			<div class="wd-sent" ng-show="sent">
@@ -60,5 +87,5 @@
 			</form>
 		</div>
 	</div>
-	<a ng-show="!sent" class="to-login" href="#/" wd-back-to-login>Back to Log In</a>
+	<!-- <a ng-show="!sent" class="to-login" href="#/" wd-back-to-login>Back to Log In</a> -->
 </div>
