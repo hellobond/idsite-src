@@ -3,28 +3,30 @@
 	<p class="text-center">We're sorry to hear that! Please reset your password below.</p> -->
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="header">
-				<!-- <legend ng-show="status=='verified'">
-					Reset your password
-				</legend> -->
+			<!-- <legend ng-show="status=='verified'">
+				Reset your password
+			</legend> -->
 
-				<div ng-show="status=='failed'">
-					<h1 class="text-center">Sorry! <br /> Something went wrong.</h1>
-					<br />
-				</div>
-
-				<legend>
-					<div class="row">
-						<div class="col-xs-12">
-							Reset your password
-						</div>
-					</div>
-				</legend>
-
-				<!-- <span ng-show="status=='verified'">Password Reset</span> -->
-
-				<span ng-show="status=='success'">You have successfully changed your password.</span>
+			<div class="header text-center">
+				<img ng-show="logoUrl" class="logo" ng-src="{{logoUrl}}"/>
 			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+
+			<div ng-show="status=='failed'">
+				<h1 class="text-center">Sorry! <br /> Something went wrong.</h1>
+			</div>
+
+
+
+			<!-- <span ng-show="status=='verified'">Password Reset</span> -->
+
+			<span ng-show="status=='success'">You have successfully changed your password.</span>
+
+
 			<div ng-show="status=='failed'">
 				<p>
 					<span>You will need to make a new password reset request.</span>
@@ -45,7 +47,27 @@
 				<p>{{error}}</p>
 			</div>
 
+
+
+
+			<div class="alert alert-danger" ng-show="unknownError">
+				<strong>Sorry, an error occured.  Please return to the previous page and try again.</strong>
+				<p>{{unknownError}}</p>
+			</div>
+
+
+
+
 			<form class="reset-form form-horizontal sp-form" role="form" ng-show="status=='verified'" ng-submit="submit()">
+
+				<legend>
+					<div class="row">
+						<div class="col-xs-12">
+							Reset your password
+						</div>
+					</div>
+				</legend>
+
 				<div class="form-group group-password" form-group>
 					<!-- <label class="col-sm-4">New Password</label> -->
 					<div class="col-sm-12">
@@ -61,12 +83,7 @@
 						<small wd-pw-mismatch class="help-block" ng-show="validationError">Password does not match</small>
 					</div>
 				</div>
-				<div class="alert alert-danger" ng-show="unknownError">
-					<strong>Sorry, an error occured.  Please return to the previous page and try again.</strong>
-					<br/>
-					<br/>
-					<p>{{unknownError}}</p>
-				</div>
+				
 				<button class="btn capitalize btn-primary btn-reset btn-lg col-sm-12" type="submit" ng-disabled="submitting">Submit</button>
 			</form>
 		</div>
