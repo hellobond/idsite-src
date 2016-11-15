@@ -28,29 +28,13 @@
 				<!-- <legend ng-show="!sent && !retry">Send password reset instructions </legend> -->
 
 				<legend ng-show="!sent && !retry">
-					<div class="row">
-						<div class="col-xs-12">
-							Reset your password
-						</div>
-					</div>
+					Reset your password
 				</legend>
 
-				<!-- <legend ng-show="retry">
-					<div class="row">
-						<div class="col-xs-12">
-							Reset link has expired
-						</div>
-					</div>
-				</legend> -->
-				<legend ng-show="sent">
-					<div class="row">
-						<div class="col-xs-12">
-							Please check your mail.
-						</div>
-					</div>
-				</legend>
 
-				<div class="wd-sent" ng-show="sent">
+
+				<!-- <div class="wd-sent" ng-show="sent"> -->
+				<div class="alert alert-success text-center" ng-show="sent">
 					<p>
 						<span>We've sent a password reset link to </span>
 						<strong>{{fields.email.value}}</strong>.
