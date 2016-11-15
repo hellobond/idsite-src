@@ -9,17 +9,38 @@
 
 			<div class="header text-center">
 				<img ng-show="logoUrl" class="logo" ng-src="{{logoUrl}}"/>
+
+				<div ng-show="status!='failed'">
+					<h1>Reset your password</h1>
+					<p>Please enter a new password below.</p>
+				</div>
+
+				<div ng-show="status=='failed'" class="text-center">
+					<h1 class="text-center">Sorry, something went wrong!</h1>
+				</div>
 			</div>
+
+
+
+
+
+
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-sm-12">
 
-			<div ng-show="status=='failed'">
-				<h1 class="text-center">Sorry! <br /> Something went wrong.</h1>
+			<div ng-show="error" class="alert alert-danger">
+				<!-- <p><strong>The error was:</strong></p>
+				<p>{{error}}</p> -->
+				<strong>Sorry, an error occured.  Please return to the previous page and try again.</strong>
+				<p>{{unknownError}}</p>
 			</div>
-
+			<!-- <div class="alert alert-danger text-center" ng-show="unknownError">
+				<strong>Sorry, an error occured.  Please return to the previous page and try again.</strong>
+				<p>{{unknownError}}</p>
+			</div> -->
 
 
 			<!-- <span ng-show="status=='verified'">Password Reset</span> -->
@@ -42,19 +63,6 @@
 				</p>
 				<p>&nbsp;</p>
 			</div>
-			<div ng-show="error" class="alert alert-danger">
-				<p><strong>The error was:</strong></p>
-				<p>{{error}}</p>
-			</div>
-
-
-
-
-			<div class="alert alert-danger" ng-show="unknownError">
-				<strong>Sorry, an error occured.  Please return to the previous page and try again.</strong>
-				<p>{{unknownError}}</p>
-			</div>
-
 
 
 
@@ -71,7 +79,7 @@
 				<div class="form-group group-password" form-group>
 					<!-- <label class="col-sm-4">New Password</label> -->
 					<div class="col-sm-12">
-						<input type="password" class="form-control" placeholder="password" name="password" form-control password-policy-validation validate-on-blur/>
+						<input type="password" class="form-control" placeholder="Password" name="password" form-control password-policy-validation validate-on-blur/>
 						<div ng-include="'views/password-error-messages.html'"></div>
 					</div>
 				</div>
@@ -79,7 +87,7 @@
 				<div class="form-group group-confirm-password" form-group>
 					<!-- <label class="col-sm-4">Confirm Password</label> -->
 					<div class="col-sm-12">
-						<input type="password" class="form-control" placeholder="password (again)" name="passwordConfirm" form-control password-match-validation validate-on-blur/>
+						<input type="password" class="form-control" placeholder="Password (again)" name="passwordConfirm" form-control password-match-validation validate-on-blur/>
 						<small wd-pw-mismatch class="help-block" ng-show="validationError">Password does not match</small>
 					</div>
 				</div>
