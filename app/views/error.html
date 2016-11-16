@@ -1,9 +1,23 @@
 <div class="view error-view">
 	<div class="row">
 		<div class="col-xs-12">
-			<p>&nbsp;</p>
-			<h2 class="text-center">Sorry! There was a problem.</h2>
-			<hr>
+			<div class="header text-center">
+				<!-- Hard Coding URL because the App blocks the reference from scope if this page renders -->
+				<img class="logo" src="https://bond.co/assets/www/img/logo.png"/>
+				<h1 class="text-center">Sorry, there was a problem.</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="alert alert-danger text-center col-xs-12">
+  				<div class="col-xs-12" ng-repeat="e in errors">
+  					<strong>{{e}}</strong>
+  				</div>
+  			</div>
+
+
 			<!-- <div class="alert alert-danger"> -->
 			<!-- <div class="well text-center color-primary">
 				Please use your browser's back button to return to the previous page, then try again.
@@ -20,13 +34,6 @@
 					<strong>{{e}}</strong>
 				</div>
 			</div> -->
-
-			<div class="alert alert-danger text-center col-xs-12">
-  				<div class="col-xs-12" ng-repeat="e in errors">
-  					<strong>{{e}}</strong>
-  				</div>
-  			</div>
-
 		</div>
 	</div>
 </div>
