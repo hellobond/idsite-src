@@ -108,8 +108,12 @@ module.exports = function (grunt) {
       development:{
         files: {
           '.tmp/styles/main.css':'<%= yeoman.app %>/styles/main.less',
-          '.tmp/styles/bond-bootstrap.css':'<%= yeoman.app %>/styles/vendor/bond-bootstrap.css',
-          '.tmp/styles/bond-main.css':'<%= yeoman.app %>/styles/vendor/bond-main.css'
+          '.tmp/styles/bond-bootstrap.css':'node_modules/style-guide/bond-bootstrap.css',
+          '.tmp/styles/bond-main.css':'<%= yeoman.app %>/styles/vendor/bond-main.css'/*,
+          '.tmp/styles/bond-main.css':'node_modules/style-guide/css/main.css'*/
+
+          /*'.tmp/styles/bond-bootstrap.css':'<%= yeoman.app %>/styles/vendor/bond-bootstrap.css',
+          '.tmp/styles/bond-main.css':'<%= yeoman.app %>/styles/vendor/bond-main.css'*/
         }
       }
     },
@@ -372,7 +376,7 @@ module.exports = function (grunt) {
         'copy:less',
         'less',
         'includes:html',
-        'imagemin',
+        //'imagemin',
         'svgmin'
       ]
     },
