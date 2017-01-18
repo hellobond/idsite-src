@@ -88,6 +88,20 @@ the development tasks.  Run the following command to start the server:
 
 > grunt serve
 
+## Bond Id-Side local server
+
+You need to set up a proxy to run this locally.
+First add this to your host file:
+#ID-Site
+127.0.0.1			account.bond.co
+Then, you need to run the stand alone proxy (navigate to folder and run sudo node server.js)
+done!
+
+Once you have setup the environment (the steps above) you are ready to start
+the development tasks.  Run the following command to start the server:
+
+> grunt serve
+
 This will open the application your browser.  Because the application does not
 have a JWT request, you will see the JWT error.  At this point you should use
 your service provider to redirect the user to your ID Site.
